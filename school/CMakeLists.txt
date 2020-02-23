@@ -10,8 +10,9 @@ file(GLOB_RECURSE HEADERS "./include/*.h")
 file(GLOB_RECURSE SRCLIST "./src/*.cpp")
 set(SRC_FILES ${SRCLIST})
 
-add_library(${PROJECT_NAME} STATIC ${SRC_FILES})
+add_library(${PROJECT_NAME} STATIC ${HEADERS} ${SRC_FILES}) # check if headers are supposed to go here
 
+#source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${HEADERS})    test this
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${SRC_FILES})
 
 set_target_properties(${PROJECT_NAME}
