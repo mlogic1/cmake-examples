@@ -3,6 +3,7 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 project(School CXX)
 
+# todo replace include_directories with target_include_directories
 include_directories(include)
 
 file(GLOB_RECURSE HEADERS "./include/*.h")
